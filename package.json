@@ -1,8 +1,9 @@
 {
-  "name": "hepta-latihan",
-  "displayName": "hepta-latihan",
+  "name": "hepta-works",
+  "displayName": "HeptaWorks Template",
+  "publisher": "HeptaWorks",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -13,8 +14,24 @@
   "main": "./extension.js",
   "contributes": {
     "commands": [{
-      "command": "hepta-latihan.helloWorld",
-      "title": "Axios-101"
+      "command": "hepta-works.gostarter",
+      "title": "Heptaworks: Go Starter Pack"
+    },
+    {
+      "command": "hepta-works.goprofessional",
+      "title": "Heptaworks: Go Professional Pack"
+    },
+    {
+      "command": "hepta-works.reactbaby",
+      "title": "Heptaworks: React Baby Pack"
+    },
+    {
+      "command": "hepta-works.reactdesigner",
+      "title": "Heptaworks: React Designer Pack"
+    },
+    {
+      "command": "hepta-works.reactmonster",
+      "title": "Heptaworks: React Monster Pack"
     }]
   },
   "scripts": {

@@ -1,31 +1,76 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+const fs = require('fs');
+const path = require('path');
+const {Utils} = require('./utils');
+const { GIT_URL } = require('./constant');
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+	const currentPath = vscode.workspace.workspaceFolders[0].uri.fsPath;
+	const util = new Utils();
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "hepta-latihan" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('hepta-latihan.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		let agentcode = Math.floor(Math.random() * 100) + 1;
-		vscode.window.showInformationMessage(`Axios-101 initiated... Good luck Agent-${agentcode}!`);
+	// Go Starter Pack
+	let goStarterPack = vscode.commands.registerCommand('hepta-works.gostarter', function () {
+		try {
+			vscode.window.showInformationMessage('Generating: Go Starter Pack...');
+			util.createPack(currentPath, GIT_URL.GO_STARTER_PACK)
+			vscode.window.showInformationMessage('Go Starter Pack Generated ! Have Fun !');
+		} catch (error) {
+			vscode.window.showErrorMessage(error.message)
+		}
 	});
 
-	context.subscriptions.push(disposable);
+	// Go Professional Pack
+	let goProfessionalPack = vscode.commands.registerCommand('hepta-works.goprofessional', function () {
+		try {
+			vscode.window.showInformationMessage('Generating: Go Professional Pack...');
+			util.createPack(currentPath, GIT_URL.GO_PROFESSIONAL_PACK)
+			vscode.window.showInformationMessage('Go Professional Pack Generated ! Have Fun !');
+		} catch (error) {
+			vscode.window.showErrorMessage(error.message)
+		}
+	});
+
+	// React Baby Pack
+	let reactBabyPack = vscode.commands.registerCommand('hepta-works.reactbaby', function () {
+		try {
+			vscode.window.showInformationMessage('Generating: React Baby Pack...');
+			util.createPack(currentPath, GIT_URL.REACT_BABY_PACK)
+			vscode.window.showInformationMessage('React Baby Pack Generated ! Have Fun !');
+		} catch (error) {
+			vscode.window.showErrorMessage(error.message)
+		}
+	});
+
+	// React Designer Pack
+	let reactDesignerPack = vscode.commands.registerCommand('hepta-works.reactdesigner', function () {
+		try {
+			vscode.window.showInformationMessage('Generating: React Designer Pack...');
+			util.createPack(currentPath, GIT_URL.REACT_DESIGNER_PACK)
+			vscode.window.showInformationMessage('React Designer Pack Generated ! Have Fun !');
+		} catch (error) {
+			vscode.window.showErrorMessage(error.message)
+		}
+	});
+
+	// React Monster Pack
+	let reactMonsterPack = vscode.commands.registerCommand('hepta-works.reactmonster', function () {
+		try {
+			vscode.window.showInformationMessage('Generating: React Monster Pack...');
+			util.createPack(currentPath, GIT_URL.REACT_MONSTER_PACK)
+			vscode.window.showInformationMessage('React Monster Pack Generated ! Have Fun !');
+		} catch (error) {
+			vscode.window.showErrorMessage(error.message)
+		}
+	});
+
+	context.subscriptions.push(goStarterPack);
+	context.subscriptions.push(goProfessionalPack);
+	context.subscriptions.push(reactBabyPack);
+	context.subscriptions.push(reactDesignerPack);
+	context.subscriptions.push(reactMonsterPack);
 }
 
 // This method is called when your extension is deactivated
