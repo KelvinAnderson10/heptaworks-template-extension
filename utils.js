@@ -10,7 +10,7 @@ class Utils {
 			execSync('git pull origin main', {cwd: currentPath}).toString()
 			execSync('git remote remove origin', {cwd: currentPath}).toString()
 		} catch (error) {
-			throw 1
+			throw error
 		}
     }
 }
