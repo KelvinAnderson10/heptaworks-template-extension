@@ -13,57 +13,27 @@ function activate(context) {
 
 	// Go Starter Pack
 	let goStarterPack = vscode.commands.registerCommand('hepta-works.gostarter', function () {
-		try {
-			vscode.window.showInformationMessage('Generating: Go Starter Pack...');
-			util.createPack(currentPath, GIT_URL.GO_STARTER_PACK)
-			vscode.window.showInformationMessage('Go Starter Pack Generated ! Have Fun !');
-		} catch (error) {
-			vscode.window.showErrorMessage(error.message)
-		}
+		util.createPack(currentPath, GIT_URL.GO_STARTER_PACK, 'Go Starter')
 	});
 
 	// Go Professional Pack
 	let goProfessionalPack = vscode.commands.registerCommand('hepta-works.goprofessional', function () {
-		try {
-			vscode.window.showInformationMessage('Generating: Go Professional Pack...');
-			util.createPack(currentPath, GIT_URL.GO_PROFESSIONAL_PACK)
-			vscode.window.showInformationMessage('Go Professional Pack Generated ! Have Fun !');
-		} catch (error) {
-			vscode.window.showErrorMessage(error.message)
-		}
+		util.createPack(currentPath, GIT_URL.GO_PROFESSIONAL_PACK, 'Go Professional')
 	});
 
 	// React Baby Pack
 	let reactBabyPack = vscode.commands.registerCommand('hepta-works.reactbaby', function () {
-		try {
-			vscode.window.showInformationMessage('Generating: React Baby Pack...');
-			util.createPack(currentPath, GIT_URL.REACT_BABY_PACK)
-			vscode.window.showInformationMessage('React Baby Pack Generated ! Have Fun !');
-		} catch (error) {
-			vscode.window.showErrorMessage(error.message)
-		}
+		util.createPack(currentPath, GIT_URL.REACT_BABY_PACK, 'React Baby')
 	});
 
 	// React Designer Pack
 	let reactDesignerPack = vscode.commands.registerCommand('hepta-works.reactdesigner', function () {
-		try {
-			vscode.window.showInformationMessage('Generating: React Designer Pack...');
-			util.createPack(currentPath, GIT_URL.REACT_DESIGNER_PACK)
-			vscode.window.showInformationMessage('React Designer Pack Generated ! Have Fun !');
-		} catch (error) {
-			vscode.window.showErrorMessage(error.message)
-		}
+		util.createPack(currentPath, GIT_URL.REACT_DESIGNER_PACK, 'React Designer')
 	});
 
 	// React Monster Pack
 	let reactMonsterPack = vscode.commands.registerCommand('hepta-works.reactmonster', function () {
-		try {
-			vscode.window.showInformationMessage('Generating: React Monster Pack...');
-			util.createPack(currentPath, GIT_URL.REACT_MONSTER_PACK)
-			vscode.window.showInformationMessage('React Monster Pack Generated ! Have Fun !');
-		} catch (error) {
-			vscode.window.showErrorMessage(error.message)
-		}
+		util.createPack(currentPath, GIT_URL.REACT_MONSTER_PACK, 'React Monster')
 	});
 
 	context.subscriptions.push(goStarterPack);

@@ -3,7 +3,7 @@
   "displayName": "HeptaWorks Template",
   "publisher": "HeptaWorks",
   "description": "",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -13,26 +13,28 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "hepta-works.gostarter",
-      "title": "Heptaworks: Go Starter Pack"
-    },
-    {
-      "command": "hepta-works.goprofessional",
-      "title": "Heptaworks: Go Professional Pack"
-    },
-    {
-      "command": "hepta-works.reactbaby",
-      "title": "Heptaworks: React Baby Pack"
-    },
-    {
-      "command": "hepta-works.reactdesigner",
-      "title": "Heptaworks: React Designer Pack"
-    },
-    {
-      "command": "hepta-works.reactmonster",
-      "title": "Heptaworks: React Monster Pack"
-    }]
+    "commands": [
+      {
+        "command": "hepta-works.gostarter",
+        "title": "Heptaworks: Go Starter Pack"
+      },
+      {
+        "command": "hepta-works.goprofessional",
+        "title": "Heptaworks: Go Professional Pack"
+      },
+      {
+        "command": "hepta-works.reactbaby",
+        "title": "Heptaworks: React Baby Pack"
+      },
+      {
+        "command": "hepta-works.reactdesigner",
+        "title": "Heptaworks: React Designer Pack"
+      },
+      {
+        "command": "hepta-works.reactmonster",
+        "title": "Heptaworks: React Monster Pack"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -40,14 +42,14 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.77.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@vscode/test-electron": "^2.3.0",
     "eslint": "^8.36.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^4.9.5",
-    "@vscode/test-electron": "^2.3.0"
+    "typescript": "^4.9.5"
   }
 }
