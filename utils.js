@@ -37,7 +37,7 @@ class Utils {
 	promptProjectName = async () => {
 		let projectName =  await vscode.window.showInputBox({
 			prompt: "Enter a name for your new project",
-			value: 'project_name',
+			value: 'project_name1',
 			validateInput: text => {
 			  return text.match(/^\w[a-zA-Z_0-9]*$/) ? null : 'Project name cannot contain whitespaces';  // return null if validates
 		}});
