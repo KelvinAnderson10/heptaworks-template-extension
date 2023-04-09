@@ -6,6 +6,12 @@ const GIT_URL = {
     REACT_MONSTER_PACK : 'https://github.com/KelvinAnderson10/dummy-react-template.git' 
 }
 
+const TYPE = {
+    GO: 'GOLANG',
+    REACT: 'REACT'
+}
+
 module.exports = {
-    GIT_URL
+    GIT_URL,
+    TYPE
 }
