@@ -13,27 +13,37 @@ function activate(context) {
 
 	// Go Starter Pack
 	let goStarterPack = vscode.commands.registerCommand('hepta-works.gostarter', async function () {
-		util.createPack(currentPath, GIT_URL.GO_STARTER_PACK, 'Go Starter', TYPE.GO)
+		// util.createPack(currentPath, GIT_URL.GO_STARTER_PACK, 'Go Starter', TYPE.GO)
+		vscode.window.showInformationMessage('feature coming soon, stay tuned !')
 	});
 
 	// Go Professional Pack
 	let goProfessionalPack = vscode.commands.registerCommand('hepta-works.goprofessional', function () {
-		util.createPack(currentPath, GIT_URL.GO_PROFESSIONAL_PACK, 'Go Professional', TYPE.GO)
+		// util.createPack(currentPath, GIT_URL.GO_PROFESSIONAL_PACK, 'Go Professional', TYPE.GO)
+		vscode.window.showInformationMessage('feature coming soon, stay tuned !')
+	});
+
+	// React Basic Pack
+	let reactBasicPack = vscode.commands.registerCommand('hepta-works.reactbasic', function () {
+		util.createPack(currentPath, GIT_URL.REACT_BASIC_PACK, 'React Basic', TYPE.REACT)
 	});
 
 	// React Baby Pack
 	let reactBabyPack = vscode.commands.registerCommand('hepta-works.reactbaby', function () {
-		util.createPack(currentPath, GIT_URL.REACT_BABY_PACK, 'React Baby', TYPE.REACT)
+		// util.createPack(currentPath, GIT_URL.REACT_BABY_PACK, 'React Baby', TYPE.REACT)
+		vscode.window.showInformationMessage('feature coming soon, stay tuned !')
 	});
 
 	// React Designer Pack
 	let reactDesignerPack = vscode.commands.registerCommand('hepta-works.reactdesigner', function () {
-		util.createPack(currentPath, GIT_URL.REACT_DESIGNER_PACK, 'React Designer', TYPE.REACT)
+		// util.createPack(currentPath, GIT_URL.REACT_DESIGNER_PACK, 'React Designer', TYPE.REACT)
+		vscode.window.showInformationMessage('feature coming soon, stay tuned !')
 	});
 
 	// React Monster Pack
 	let reactMonsterPack = vscode.commands.registerCommand('hepta-works.reactmonster', function () {
-		util.createPack(currentPath, GIT_URL.REACT_MONSTER_PACK, 'React Monster', TYPE.REACT)
+		// util.createPack(currentPath, GIT_URL.REACT_MONSTER_PACK, 'React Monster', TYPE.REACT)
+		vscode.window.showInformationMessage('feature coming soon, stay tuned !')
 	});
 
 	context.subscriptions.push(goStarterPack);
@@ -41,6 +51,8 @@ function activate(context) {
 	context.subscriptions.push(reactBabyPack);
 	context.subscriptions.push(reactDesignerPack);
 	context.subscriptions.push(reactMonsterPack);
+	context.subscriptions.push(reactBasicPack);
+
 }
 
 // This method is called when your extension is deactivated

@@ -23,6 +23,10 @@
         "title": "Heptaworks: Go Professional Pack"
       },
       {
+        "command": "hepta-works.reactbasic",
+        "title": "Heptaworks: React Basic Pack"
+      },
+      {
         "command": "hepta-works.reactbaby",
         "title": "Heptaworks: React Baby Pack"
       },

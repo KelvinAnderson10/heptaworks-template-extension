@@ -19,7 +19,7 @@ class Utils {
 				try {
 					execSync('git init', {cwd: currentPath}).toString()
 					execSync(`git remote add origin ${githubUrl}`, {cwd: currentPath}).toString()
-					execSync('git pull origin main', {cwd: currentPath}).toString()
+					execSync('git pull origin master', {cwd: currentPath}).toString()
 					await this.renameProject(currentPath, projectName, type)
 					execSync('git add .', {cwd: currentPath}).toString()
 					execSync('git commit -m "Initial commit from heptaworks"', {cwd: currentPath}).toString()
@@ -52,7 +52,7 @@ class Utils {
 					`${currentPath}/package-lock.json`,
 					`${currentPath}/package.json`,
 				],
-				from: /testing-template/g,
+				from: /project_name/g,
 				to: projectName,
 			};
 		}
@@ -63,7 +63,7 @@ class Utils {
 					`${currentPath}/package-lock.json`,
 					`${currentPath}/package.json`,
 				],
-				from: /testing-template/g,
+				from: /project_name/g,
 				to: projectName,
 			};
 		}
